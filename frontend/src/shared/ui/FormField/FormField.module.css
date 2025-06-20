@@ -1,0 +1,98 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+}
+
+
+.label, .input::placeholder, .wrapper .select.placeholder, .input, .option {
+    font-size: 20px;
+    font-weight: 400;
+    font-stretch: semi-condensed;
+    line-height: 130%;
+}
+
+.input, .option {
+    display: flex;
+    align-items: center;
+    background-color: var(--grey);
+    border: none;
+    padding: 0 15px;
+    resize: vertical;
+    min-height: 56px;
+
+}
+
+:global(.form--modal__body) {
+    .input {
+        background-color: transparent;
+        border: 2px solid var(--grey);
+    }
+}
+
+
+
+.input:focus {
+    outline: none;
+    border-radius: 0;
+}
+
+.input::placeholder {
+    color: var(--placeholder);
+}
+
+.hint {
+    font-size: 13px;
+    font-weight: 400;
+    font-stretch: semi-condensed;
+    line-height: 130%;
+}
+
+.error .hint{
+    color: var(--error);
+}
+
+.error .input {
+    border-color: var(--error);
+    color: var(--error);
+}
+
+
+
+
+/*select*/
+
+.select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: var(--dark-grey);
+    cursor: pointer;
+}
+
+
+.options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: var(--dark-grey);
+    border: 1px solid var(--grey);
+}
+
+.options .option {
+    cursor: pointer;
+    border: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .option:hover {
+        background-color: var(--grey);
+    }
+}

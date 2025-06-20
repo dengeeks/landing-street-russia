@@ -1,0 +1,24 @@
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 89px;
+    width: 100%;
+    max-width: 535px;
+}
+
+.registration-form__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+@media (max-width: 768px) {
+    .registration-form {
+        gap: 35px;
+        max-width: none;
+    }
+
+    .registration-form__fields {
+        gap: 20px;
+    }
+}

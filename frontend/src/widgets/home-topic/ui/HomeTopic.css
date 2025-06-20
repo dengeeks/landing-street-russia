@@ -1,0 +1,32 @@
+.home-topic {
+    background-color: var(--grey);
+    --dashed-color: var(--dark-grey)
+}
+
+.home-topic__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 85px;
+    padding-bottom: 85px;
+}
+
+.home-topic__text {
+    color: var(--dark-grey);
+    font-weight: 400;
+    font-size: 20px;
+    font-stretch: semi-condensed;
+    line-height: 130%;
+}
+
+@media (max-width: 768px) {
+    .home-topic__container {
+        gap: 2px;
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .home-topic__text {
+        font-size: 15px;
+    }
+}

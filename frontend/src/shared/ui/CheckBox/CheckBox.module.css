@@ -1,0 +1,53 @@
+.checkbox {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.text, .error {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 130%;
+    font-stretch: semi-condensed;
+}
+
+.input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.customBox {
+    min-width: 23px;
+    min-height: 23px;
+    border: 1px solid var(--white);
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+    position: relative;
+}
+
+.error {
+    color: var(--error);
+}
+
+.input:checked + .customBox::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background-color: var(--red);
+}
